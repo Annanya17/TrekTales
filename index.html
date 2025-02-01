@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrekTales</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+   <!-- /* Navbar */ -->
+  <style>
+   
+    .navbar-nav .nav-link.active{
+        color:#F5F5F5;
+        font-size: 3vh;
+    }
+    .nav-link{
+        color:#F5F5F5;
+        font-size: 3vh;
+    }
+    .btn-outline-primary {
+        --bs-btn-border-color: #F5F5F5;
+        --bs-btn-hover-border-color: lightgreen;
+        --bs-btn-color: bisque;
+        --bs-btn-hover-bg:  #2E8B57;
+    }
+    .navbar-brand{
+        padding-top: 2vh;
+        font-size:3.5vh;
+    }
+    .bg-dark{
+        background-color:  #2C2C2C!important;
+        /* height: 4vw !important; */
+    }
+   </style> 
+
+   <!--body-->
+   <style>
+    #body{
+        background-color:#BFD7ED;
+        margin: 0;
+    }
+   </style>
+
+   <!--HERO CAROUSEL-->
+   <style>
+    /* Base styling for the carousel images */
+    .carousel-inner img {
+      width: 100%;
+      height: 35vw; /* Default height for large screens */
+      object-fit: cover; /* Ensures the image covers the area without distortion */
+    }
+  
+    /* Responsive adjustments for tablets */
+    @media (max-width: 992px) {
+      .carousel-inner img {
+        height: 50vw; /* Adjust height for tablets */
+      }
+    }
+  
+    /* Responsive adjustments for mobile devices */
+    @media (max-width: 576px) {
+      .carousel-inner img {
+        height: 45vw; /* Adjust height for smaller screens */
+      }
+    }
+  
+    /* Optional styling for carousel container for better responsiveness */
+    #carouselExampleSlidesOnly {
+      overflow: hidden; /* Prevents any overflow issues */
+    }
+  </style>
+  
+
+   <!-- /* About me section */ -->
+   <style>
+    /* Base styling for .about-section */
+    .about-section {
+      background-color: #BFD7ED; /* Light background for better readability */
+      padding: 20px;
+    }
+  
+    .about-section img {
+      border-radius: 10px; /* Rounded corners for the image */
+      box-shadow: 0 4px 10px rgba(73, 42, 42, 0.2); /* Subtle shadow */
+      width: 100%;
+      height: auto;
+    }
+  
+    .about-section h2 {
+      font-size: 6vh !important;
+      color: #333; /* Darker text for better contrast */
+    }
+  
+    .about-section p {
+      color: #555; /* Neutral gray for the text */
+      line-height: 1.5; /* Improve readability */
+      font-size: 3vh !important;
+    }
+  
+    .mb-4 {
+      margin-bottom: 2vw !important;
+      margin-top: 2vh !important;
+    }
+  
+    .about-section .btn {
+      background-color: #2E8B57; /* Bootstrap Primary Color #FF6F61 */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px; /* Rounded button */
+      transition: all 0.3s ease;
+    }
+  
+    .about-section .btn:hover {
+      background-color: #005F5F; /* Darker blue on hover */
+      color: white;
+    }
+  
+    /* Media Queries for Responsive Design */
+  
+    /* For tablets (landscape and portrait) */
+    @media (max-width: 992px) {
+      .about-section h2 {
+        font-size: 4vh !important;
+      }
+  
+      .about-section p {
+        font-size: 2.5vh !important;
+      }
+  
+      .about-section img {
+        height: auto;
+      }
+    }
+  
+    /* For mobile devices (portrait and smaller screens) */
+    @media (max-width: 576px) {
+      .about-section .row {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .about-section img {
+        height: auto;
+        margin-bottom: 20px;
+      }
+  
+      .about-section h2 {
+        font-size: 5vh !important;
+        text-align: center;
+      }
+  
+      .about-section p {
+        font-size: 2vh !important;
+        text-align: center;
+      }
+  
+      .about-section .btn {
+        display: block;
+        margin: 10px auto;
+      }
+    }
+  
+    /* For desktop and larger screens */
+    @media (min-width: 1200px) {
+      .about-section h2 {
+        font-size: 6vh !important;
+      }
+  
+      .about-section p {
+        font-size: 3vh !important;
+      }
+    }
+  </style>
+  
+
+<!-- global geteway -->
+<style>
+main {
+  margin-top: 40px;
+  padding: 0 10px;
+}
+ #gg{
+  margin-bottom: 3vh;
+} 
+/* @media (max-width: 767px){
+  h1{
+  margin-bottom: 1vh ;
+} 
+} */
+</style>
+
+<!-- /* Article Section */ -->
+<style>
+.article {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 22px;
+  box-shadow: 0px 0px 10px rgba(111, 60, 60, 0.05);
+  border-radius: 8px;
+}
+
+.article img {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.article .location {
+  cursor: pointer;
+  font-style: italic;
+  text-align: center;
+  font-size: 9pt;
+  margin-top: 15px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.article .location b {
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 12pt;
+  font-weight: 600;
+}
+
+.article .desc {
+  margin-top: 12px;
+  font-size: 10pt;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.article .info {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  margin-top: -5px;
+  color: #9a9ab3;
+}
+
+.article .info .comment {
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.article .info .comment:hover {
+  color: #b5b5e0;
+  transition: all 0.5s;
+}
+
+.article .info .date, 
+.article .info .comment {
+  font-size: 8pt;
+} 
+
+.info .fa-calendar, 
+.info .fa-comment-alt {
+  margin-right: 3px;
+}
+
+.quote {
+  font-size: 14pt;
+  text-align: center;
+  background-color: #484858;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.quote p {
+  margin-bottom: 0;
+  font-style: italic;
+  padding: 15px;
+}
+
+.quote span {
+  font-style: normal;
+  font-size: 10pt;
+  color: #999;
+}
+
+/* Adjust for large screens (desktop) */
+@media (min-width: 992px) {
+  .content .col-md-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  #arti1 {
+    margin-left: 5vh;
+  }
+
+  #arti3 {
+    margin-right: 5vh;
+  }
+}
+
+/* Adjust for tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .content .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+
+  #arti1, #arti2, #arti3 {
+    margin: 0;
+  }
+}
+
+/* Adjust for small screens (mobile) */
+@media (max-width: 767px) {
+  .content .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .article img {
+    height: auto;
+    object-fit: cover;
+  }
+
+  .quote p {
+    font-size: 12pt;
+    padding: 10px;
+  }
+
+  .quote span {
+    font-size: 9pt;
+  }
+
+  a.Sebutton {
+    font-size: 3.5vw;
+  }
+}
+
+
+</style>
+
+<!-- /* Blog and Spot Feature Sections */ -->
+<style>
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 2.5vh;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 2vh;
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #2E8B57;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #005F5F;
+}
+
+</style>
+
+<!--Article section-->
+<style>
+  .col-md-8 {
+  padding-top: 20px;
+}
+.col-md-4 {
+  padding-top: 20px;
+}
+.card{
+  margin-top: 3vh;
+}
+#travelj{
+  margin-bottom: 3vh;
+}
+
+
+</style>
+
+<!--FAQ-->
+<style>
+ /* General Styling */
+.faq-section {
+  background-color: #BFD7ED; /* Match website background */
+  padding: 50px 15px;
+}
+
+.faq-section h1 {
+  font-size: 6vh;
+  font-weight: bold;
+  color: #2C3E50; /* Deep blue for contrast */
+  margin-bottom: 30px;
+}
+
+.accordion-item {
+  background-color: rgba(255, 255, 255, 0.8); /* Light transparent white */
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button {
+  background-color: #F5F8FA; /* Soft gray for button */
+  color: #34495E; /* Medium gray-blue text color */
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.accordion-button:hover {
+  background-color: #E9F5FF; /* Light blue hover effect */
+  transform: scale(1.02);
+}
+
+.accordion-button:focus {
+  box-shadow: none; /* Remove default Bootstrap focus outline */
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #27748d; /* Match with pastel blue but slightly darker */
+  color: #ffffff; /* White text for contrast */
+}
+
+.accordion-body {
+  font-size: 0.95rem;
+  color: #555; /* Dark gray for readability */
+  line-height: 1.6;
+}
+
+.accordion-item:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Add padding and responsive spacing */
+/* .container {
+  max-width: 900px;
+  margin: 0 auto;
+} */
+
+  
+</style>
+
+<!---REviws-->
+<style>
+.review-section {
+  background-color: #BFD7ED; /* Matches the website background */
+  padding: 3rem 0; /* Adds some spacing */
+}
+
+.review-section h2 {
+  font-size: 2.5rem;
+  color: #2C3E50; /* Contrasting darker color for headings */
+  font-weight: bold;
+}
+
+.review-section p {
+  font-size: 1rem;
+  color: #3A4A58; /* Slightly muted text color for the subtitle */
+}
+
+.card {
+  background-color: #FFFFFF; /* Keeps the cards white for contrast */
+  border: 1px solid #E1E8ED; /* Light border for subtle definition */
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(44, 62, 80, 0.2); /* Soft shadow effect */
+}
+
+.card h5 {
+  color: #2C3E50; /* Dark color for reviewer names */
+  font-weight: bold;
+}
+
+.card p {
+  color: #4A5C68; /* Slightly muted text color for reviews */
+}
+
+
+
+</style>
+<!--Footer-->
+<style>
+.footer {
+  position: relative;
+  padding-top: 45px;
+  background: #2C3E50;
+}
+
+.footer .footer-blog,
+.footer .footer-insta,
+.footer .footer-tags,
+.footer .footer-newsletter {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.footer .footer-blog h3,
+.footer .footer-insta h3,
+.footer .footer-tags h3,
+.footer .footer-newsletter h3 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+
+.footer .footer-blog h3::after,
+.footer .footer-insta h3::after,
+.footer .footer-tags h3::after,
+.footer .footer-newsletter h3::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: white;
+}
+
+.footer .footer-blog div {
+  position: relative;
+  padding-left: 15px;
+}
+
+.footer .footer-blog div::before {
+  position: absolute;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #cccccc;
+  left: 0;
+}
+
+.footer .footer-blog div a {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: white;
+}
+
+.footer .footer-blog div a:hover {
+  color: #BFD7ED;
+}
+
+.footer .footer-blog div p {
+  padding-left: 20px;
+  color: #757575;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer .footer-blog div p::before {
+  position: absolute;
+  content: "\f017";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  color: #757575;
+  left: 15px;
+}
+
+.footer .footer-insta {
+  float: left;
+  font-size: 0;
+}
+
+.footer .footer-insta a {
+  padding: 0 5px 5px 0;
+  display: block;
+  width: 33.33%;
+  float: left;
+}
+
+.footer .footer-insta a img {
+  width: 100%;
+}
+
+.footer .footer-tags {
+  font-size: 0;
+}
+
+.footer .footer-tags a {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  padding: 3px 8px;
+  font-size: 14px;
+  color: white;
+  text-transform: capitalize;
+  border: 1px solid #dddddd;
+  text-decoration: none;
+}
+
+.footer .footer-tags a:hover {
+  color: white;
+  background: #BFD7ED;
+  border-color: #BFD7ED;
+}
+
+.footer .footer-newsletter .form {
+  position: relative;
+  width: 100%;
+}
+
+.footer .footer-newsletter input {
+  height: 45px;
+  border: 1px solid #dddddd;
+  border-radius: 0;
+  background: white;
+  margin-bottom: 15px;
+}
+
+.footer .footer-newsletter .btn {
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #dddddd;
+  background: #1E2A36;;
+  border-radius: 0;
+  border: 1px solid #dddddd;
+  transition: .3s;
+}
+
+.footer .footer-newsletter .btn:hover {
+  color: #ffffff;
+  background:  #BFD7ED;
+  border-color: #BFD7ED;
+}
+
+.footer .footer-newsletter .btn:focus {
+  box-shadow: none;
+}
+
+.footer .footer-contact {
+  position: relative;
+  padding: 25px 0;
+  text-align: center;
+  border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .footer-contact h4 {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.footer .footer-contact p {
+  margin: 0;
+  font-size: 16px;
+  color: #999999;
+}
+
+.footer .footer-contact a {
+  display: inline-block;
+}
+
+.footer .footer-contact a i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #999999;
+}
+
+.footer .footer-contact a:last-child i {
+  margin: 0;
+}
+
+.footer .footer-contact a:hover i {
+  color: #BFD7ED;
+}
+
+@media (max-width: 767.98px) {
+  .footer .footer-contact .col-md-4 {
+    margin-bottom: 25px;
+  }
+
+  .footer .footer-contact .col-md-4:last-child {
+    margin: 0;
+  }
+}
+
+.footer .copyright {
+  position: relative;
+  padding: 25px 0;
+  background:#1E2A36;
+}
+
+.footer .copyright .copy-text p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+
+.footer .copyright .copy-text p a {
+  color: white;
+}
+
+.footer .copyright .copy-text p a:hover {
+  color: #BFD7ED;
+}
+
+.footer .copyright .copy-menu {
+  position: relative;
+  font-size: 0;
+  text-align: right;
+}
+
+.footer .copyright .copy-menu a {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.footer .copyright .copy-menu a:hover {
+  color: #BFD7ED;
+}
+
+.footer .copyright .copy-menu a:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
+
+@media (max-width: 767.98px) {
+  .footer .copyright .copy-text,
+  .footer .copyright .copy-menu {
+    text-align: center;
+  }
+
+  .footer .copyright .copy-text p {
+    margin-bottom: 5px;
+  }
+
+}
+</style>
+<!--font on text-->
+<style>
+  p.card-text{
+    font-family: sans-serif;
+    font-size: medium;
+  }
+  p.desc{
+    font-family: sans-serif;
+    font-size: medium;
+  }
+</style>
+
+<style>
+
+h1{
+  font-size: 6vh;
+    font-weight: bold;
+    color: #2C3E50;
+    font-style:italic;
+}
+
+</style> 
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body id="body">
+    <!--Navbar-->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg nav-color sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="logo4.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+            TrekTales</a>
+
+            <!-- Hamburger Menu for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tips">Travel Tips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+
+                <!-- !-- Search Bar --> -->
+                    <form class="d-flex ms-lg-3">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+            </div>
+         
+        </div>
+      </nav>
+
+    <!--Header Banner-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+             <img src="slide3.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="slide2.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="slide1.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+
+      <!---ABOUT ME Section-->
+<section class="about-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Side: Image -->
+        <div class="col-md-6">
+          <img src="girl.jpg" alt="About Me" class="img-fluid rounded shadow">
+        </div>
+        <!-- Right Side: Text -->
+        <div class="col-md-6">
+          <h2 class="mb-4">About Me</h2>
+          <p class="mb-4">
+            Welcome to my travel blog! I’m passionate about exploring the world and sharing my experiences. 
+            Through my journey, I hope to inspire you to embark on your own adventures.
+          </p>
+          <p class="mb-4">
+            Whether it's breathtaking landscapes, hidden gems, or cultural experiences, 
+            I believe every journey has a story worth sharing. Join me as I uncover the wonders of the world!
+          </p>
+          <a href="#read-more" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<!--Global gareways-->
+  <main>
+    <div class="row content">
+      <div class="text-center" id="gg">
+        <h1>Global Getaways</h1>
+      </div>
+      <div style="padding-left: 0;" class="col-md-4">
+        <div class="article" id="arti1">
+          <img src="canada.jpg">
+          <h2 class="location"><b>Canada</b> <br/>Discover Canada – A Land of Natural Wonders</h2>
+          <p class="desc">Canada is a dream destination for travelers,
+             offering a perfect blend of breathtaking natural landscapes and vibrant city life. From the majestic
+              Rocky Mountains and the stunning Niagara Falls to the serene lakes of Banff and Jasper National Parks,
+             Canada’s natural beauty is unparalleled..... 
+             <a href="#read-more" class="Sebutton">Read More</a>
+            </p>
+
+          <div class="info">
+            <span class="date"><i class="far fa-calendar"></i>  January 12, 2017</span>
+            <span class="comment"><i class="far fa-comment-alt"></i> Robart Smith</span>
+          </div>
+        </div>
+        <div class="article quote" id="q1">
+          <p>“Travel makes a wise man better, and a fool worse.”<br/>   <span>- Thomas Fuller-</span></p>
+        </div>
+      </div>
+      <div style="padding: 0 7.5px;" class="col-md-4">
+        <div class="article quote">
+          <p>“Traveling – it leaves you speechless, then turns you into a storyteller.”<br/>   <span>- Ibn Battuta-</span></p>
+        </div>
+        <div class="article" id="arti2">
+          <img src="maldiv.jpg">
+          <h2 class="location"><b>Maldives</b> <br/> Turquoise Waters, White Sands, Endless Bliss</h2>
+          <p class="desc">The Maldives is a dream destination with turquoise waters, white-sand beaches, and vibrant coral reefs. Known for its luxurious overwater resorts, it offers a perfect blend of relaxation and adventure. Snorkeling, diving, and breathtaking sunsets are just some of the island's delights. A serene escape, 
+            the Maldives promises unforgettable moments amidst natural beauty.
+            <a href="#read-more" class="Sebutton">Read More</a>
+          </p>
+          <div class="info">
+            <span class="date"><i class="far fa-calendar"></i>  April 23, 2017</span>
+            <span class="comment"><i class="far fa-comment-alt"></i> Mary Woe</span>
+          </div>
+        </div>
+      </div>
+      <div style="padding-right: 0;" class="col-md-4">
+        <div class="article" id="arti3">
+          <img src="japan.jpg">
+          <h2 class="location"><b>Japan</b> <br/> Japan’s Mountains: Serenity Awaits.</h2>
+          <p class="desc"> Japan is a captivating destination where ancient traditions meet futuristic innovations. 
+            From the serene temples of Kyoto and the majestic Mount Fuji to the bustling streets of Tokyo, Japan offers a diverse and unforgettable experience.....
+            <a href="#read-more" class="Sebutton">Read More</a>
+          </p>
+         
+          <div class="info">
+            <span class="date"><i class="far fa-calendar"></i>  October 19, 2017</span>
+            <span class="comment"><i class="far fa-comment-alt"></i> Rafeal Thomas</span>
+            
+          </div>
+        </div>
+        <div class="article quote" id="q3">
+          <p>“Travel is never a matter of money but of courage.”<br/>   <span>- Paolo Coelho -</span></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+<!-- Discover India’s Charm-->
+<section id="featured-spots" class="py-5" style="background-color:#BFD7ED ;">
+  <div class="container">
+    <div class="text-center">
+      <h1>Discover India’s Charm</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="kerala.png" class="card-img-top" alt="kerala">
+          <div class="card-body">
+            <h4 class="card-title">"Kerala: "God's Own Country"</h4>
+            <p class="card-text"> Kerala, located on the southwestern coast of India, is a paradise of lush greenery, serene backwaters, and
+               golden beaches.It is known for its vibrant culture, delicious cuisine,
+               and ayurvedic wellness.Popular attractions include Alleppey backwaters,
+               Munnar tea gardens,and beaches of Varkala and Kovalam. It’s a perfect blend of nature and tradition..</p>
+            <a href="#" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="rajasthan.png" class="card-img-top" alt="Rajasthan">
+          <div class="card-body">
+            <h4 class="card-title">"Rajasthan:The Desert Jewel of India."</h4>
+            <p class="card-text">Rajasthan, the "Land of Kings," is a vibrant blend of royal heritage, desert landscapes, and colorful culture. Known for its majestic forts, palaces, and bustling bazaars, it showcases the grandeur of India's past. From the golden sands of Jaisalmer to the tranquil lakes of Udaipur,
+               Rajasthan offers a royal experience like no other,steeped in history and charm.</p>
+            <a href="#" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="kashmir (1).png" class="card-img-top" alt="kashmir">
+          <div class="card-body">
+            <h4 class="card-title">"Kashmir: The Paradise on Earth."</h4>
+            <p class="card-text">Kashmir, often called "Paradise on Earth," is a land of breathtaking beauty with snow-capped mountains, lush valleys, and serene lakes. Famous for its picturesque Dal Lake, vibrant tulip gardens, and charming houseboats, 
+              it’s a haven for nature lovers and peace seekers. Its timeless beauty and warm hospitality leave every visitor spellbound.</p>
+            <a href="#" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="kolkata.png" class="card-img-top" alt="kolkata">
+          <div class="card-body">
+            <h4 class="card-title">"Kolkata: The City of Passion, Poetry, and Play."</h4>
+            <p class="card-text">Kolkata, the cultural capital of India, is a city where tradition and modernity coexist in harmony. Known for its colonial architecture, vibrant festivals, and rich literary history, it offers a unique charm. 
+              From the iconic Howrah Bridge to the delicious street food, Kolkata leaves an unforgettable impression on all who visit.</p>
+            <a href="#" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="goa.png" class="card-img-top" alt="Goa">
+          <div class="card-body">
+            <h4 class="card-title">"Goa: India’s Beach Paradise"</h4>
+            <p class="card-text">Goa, India’s beach paradise, is known for its golden sands, vibrant nightlife, and laid-back vibe. With its palm-fringed beaches, Portuguese heritage, and lively markets, it offers the perfect blend of relaxation and adventure.
+              Whether you’re exploring historic churches or indulging in water sports, Goa promises a memorable escape.Goa offers a perfect blend of experiences.</p>
+            <a href="#" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="mussorie.png" class="card-img-top" alt="mussorie">
+          <div class="card-body">
+            <h4 class="card-title">"Mussoorie: Where the Hills Meet the Sky"</h5>
+            <p class="card-text">Mussoorie, often called the "Queen of Hills," is a charming hill station nestled in the foothills of the Himalayas. Known for its lush greenery, misty landscapes, and scenic views, it offers a perfect escape from the bustling city life. Popular attractions include Kempty Falls, Mall Road, and Gun Hill.
+               It's an ideal destination for nature lovers and adventure enthusiasts alike.</p>
+            <a href="#" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+     
+      <div class="col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="darjeeling.png" class="card-img-top" alt="Darjeeling">
+          <div class="card-body">
+            <h4 class="card-title">"Darjeeling: The Queen of Hills"</h4>
+            <p class="card-text">Darjeeling, nestled in the foothills of the Himalayas, is a charming hill station known for its tea gardens and stunning mountain views. The famous Toy Train ride offers a unique way to explore its scenic landscapes. With its colonial-era architecture, vibrant monasteries, and
+               breathtaking views of Kanchenjunga, Darjeeling is a haven for nature lovers and history enthusiasts alike.</p>
+            <a href="#" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="flowervalley.png" class="card-img-top" alt="Uttarakhand">
+          <div class="card-body">
+            <h4 class="card-title">"Valley of Flowers, Uttarakhand: A Natural Paradise"</h4>
+            <p class="card-text">The Valley of Flowers in Uttarakhand is a breathtaking UNESCO World Heritage site,
+               known for its vibrant blooms and stunning alpine meadows.
+                Nestled in the Western Himalayas, it is home to a diverse range of flora, creating a colorful serene landscape. 
+              A trek through this natural paradise offers a peaceful escape amidst nature.</p>
+            <a href="#" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="gujrat.png" class="card-img-top" alt="gujrat">
+          <div class="card-body">
+            <h4 class="card-title">"Gujarat’s Gir: A Sanctuary of Wild Majesty."</h4>
+            <p class="card-text">Gir Forest in Gujarat is a renowned wildlife sanctuary and the last refuge of the endangered Asiatic lion.
+               Spread over 1,400 square kilometers, it boasts a rich diversity of flora and fauna, making it a haven for nature enthusiasts and
+                wildlife photographers.With its diverse wildlife, including leopards, deer, and unique bird species, the sanctuary offers an unforgettable nature experience.
+             </p>
+            <a href="#" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+<!--Article Section-->
+<div class="container">
+  <div class="text-center" id="travelj">
+    <h1>Travel Journal</h1>
+  </div>
+
+  <!--Main-->
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card w-100">
+        <img class="card-img-top" src="himalaya.jpg"  alt="Card image cap">
+        <div class="card-body">
+          <h1 class="card-title">Hiking Through the Himalayas: A Beginner’s Guide</h1>
+          <p class="card-text">Hiking through the Himalayas is a dream for many, offering stunning views and an opportunity to experience nature at its finest. For beginners, there are several accessible treks like Triund, Kedarkantha, and the Valley of Flowers that are not overly challenging yet still provide incredible scenery. Preparation is crucial—build your fitness level, invest in quality trekking shoes, and pack light but smart. Understanding the weather is key; the best times to trek are during spring and autumn, avoiding the harsh winter or monsoon seasons. Acclimatization is important to avoid altitude sickness, so always take it slow when reaching higher altitudes. Follow basic trekking etiquette, respect nature, and stay on marked trails. Safety should be a priority, so trekking with a guide or group is recommended. Embrace the adventure and immerse yourself in the Himalayas' beauty, from dense forests to snow-covered peaks. With the right planning,
+             hiking in the Himalayas can be an unforgettable and transformative experience.</p>
+          <a href="#" class="btn btn-primary">Discover more!</a>
+        </div>
+      </div>
+
+      <div class="card w-100">
+        <img class="card-img-top" src="eco friendlynature.jpg"  alt="Card image cap">
+        <div class="card-body">
+          <h1 class="card-title">How to Travel Sustainably in 2025: A Guide to Eco-Friendly Destinations</h1>
+          <p class="card-text">Traveling sustainably in 2025 involves making environmentally conscious and community-focused choices 
+            throughout your journey. Begin by selecting eco-friendly destinations like Costa Rica, Bhutan, or New Zealand, known for their commitment to
+             conservation and sustainable tourism. Stay in accommodations with green certifications that use renewable energy, reduce waste, 
+             and support local communities. Opt for public transport, biking, or walking to minimize your carbon footprint while exploring. 
+             Pack reusable items like water bottles, utensils, and bags to cut down on single-use plastics. Support local businesses, markets,
+              and artisans to contribute to the local economy. Choose experiences that respect wildlife and preserve natural habitats. 
+              Be mindful of water and energy consumption during your stay. Educate yourself about the destination's culture and 
+              environmental challenges...
+             </p>
+          <a href="#" class="btn btn-primary">Discover more!</a>
+        </div>
+      </div>
+
+     
+      
+
+    </div>
+
+    <!--Aside-->
+    <div class="col-md-4">
+
+      <div class="card w-100">
+        <img class="card-img-top" src="victoriamemorial.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">10 Must-Visit Places in Kolkata</h4>
+          <p class="card-text">Kolkata, a city steeped in history and culture, offers a variety of must-visit places that 
+            reflect its rich heritage. The Victoria Memorial, a grand colonial-era monument, 
+            is a symbol of British rule and houses a fascinating museum. Howrah Bridge,
+             one of the busiest cantilever bridges in the world, offers stunning views of the Hooghly River. 
+             The Dakshineswar Kali Temple, an architectural marvel by the river, holds spiritual significance for devotees...
+              </p>
+          <a href="#" class="btn btn-primary">Discover more!</a>
+        </div>
+      </div>
+      <div class="card w-100">
+        <img class="card-img-top" src="andaman.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Top 5 Beaches in Andaman and Nicobar Islands for Every Traveler</h4>
+          <p class="card-text">The Andaman and Nicobar Islands boast some of India’s most beautiful beaches,
+             perfect for all kinds of travelers. **Radhanagar Beach** on Havelock Island is known for its pristine white sand and turquoise waters, 
+             ideal for relaxation and sunset views. **Vijaynagar Beach**, also on Havelock, offers a peaceful atmosphere,
+              perfect for solitude and swimming... 
+              </p>
+          <a href="#" class="btn btn-primary">Discover more!</a>
+        </div>
+      </div> 
+      
+    </div>
+  </div>
+</div>
+
+
+
+<!--Travel-tips-->
+<section id="featured-spots" class="py-5" style="background-color:#BFD7ED ;">
+  <div class="container">
+    <div class="text-center">
+      <h1>Travel Tips and Recommendations</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Packing Tips</h4>
+            <p class="card-text"> Packing efficiently is key to a smooth and stress-free trip. 
+              Start by making a list of essentials based on your destination and the type of trip, 
+              whether it's a beach vacation, hiking adventure, or city exploration. 
+              Pack light by choosing versatile clothing that can be mixed and matched, 
+              and always roll your clothes to save space. Don’t forget to pack travel-sized toiletries,
+               a power bank, and any necessary medications. Invest in a good-quality luggage set with compartments for easy organization. 
+               Always carry a copy of important documents like your passport, travel insurance, and emergency contacts. 
+               Lastly, remember to leave some space for souvenirs or unexpected purchases!</p>
+            <a href="#" class="btn btn-primary">Load more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="budget.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Budgeting Tips</h4>
+            <p class="card-text">Traveling on a budget doesn't mean sacrificing experiences.
+              To save money, start by planning and booking flights in advance, using fare comparison tools to find the best deals.
+               Opt for affordable accommodations like hostels, guesthouses, or vacation rentals, and consider staying a little outside major 
+               tourist areas to cut costs. Stick to a daily budget and track your spending while avoiding pricey tourist traps. 
+               For meals, explore local food markets or street vendors for authentic and cheaper options. Take advantage of free attractions,
+                local transport, and discounts, and always keep an emergency fund aside. Smart budgeting lets you enjoy your trip without
+                 financial stress!</p>
+            <a href="#" class="btn btn-primary">Load more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="local.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Local Experiences</h4>
+            <p class="card-text">Embracing local experiences is one of the best ways to truly connect with a destination. 
+              Instead of sticking to tourist spots, explore off-the-beaten-path places, such as hidden cafes, local markets, 
+              or neighborhood festivals, to gain an authentic taste of the culture. Participate in traditional activities like cooking classes, 
+              craft workshops, or guided tours with locals to learn more about the customs and lifestyle. Engaging with local people, 
+              trying regional dishes, and exploring unique art forms will enrich your travel experience and create lasting memories. By immersing yourself in the local way of life, you’ll foster meaningful connections and support the community.
+             </p>
+            <a href="#" class="btn btn-primary">Load more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--FAQ-->
+<div class="faq-section">
+  <div class="text-center">
+      <h1>Frequently Asked Questions</h1>
+    </div>
+  <div class="container">
+    <div class="accordion" id="faqAccordion">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            What is the best time to visit a destination?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            The best time to visit varies depending on the destination. Generally, spring and fall are the most pleasant times to visit most destinations.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            What travel documents do I need?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Travel documents may include a passport, visa, and other country-specific entry requirements. It’s important to check the specific destination’s regulations ahead of time.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            How do I make a booking?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            You can make a booking through our website by selecting your desired destination, travel dates, and package. You will then be guided through the booking process.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Can I cancel my trip?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Cancellation policies vary depending on the booking. Please refer to the terms and conditions for each trip to understand the cancellation process and fees.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+              Are the experiences you share based on your personal travel?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, all the experiences and recommendations on my blog come from my personal travels. I strive to provide honest and practical advice based on what I’ve experienced firsthand.
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+<!--review-->
+<div class="review-section py-5">
+  <div class="text-center">
+    <h1>What Our Travelers Say</h1>
+  </div>
+  <div class="container text-center">
+    <!-- <h1 class="mb-4">"What Our Travelers Say"</h1> -->
+   
+    <div class="row gy-4">
+      <!-- Review 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <div class="card-bodyr">
+            
+            <p class="card-text">"The trip was amazing! Beautiful destinations, seamless planning, and unforgettable experiences."</p>
+            <div class="text-center">
+              <h5>-Aniksha Patel</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Review 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <div class="card-bodyr">
+            <p class="card-text">"Exploring the Maldives was like a dream come true! Highly recommend this blog for travel ideas."</p>
+            <div class="text-center">
+              <h5>-Mary dsena</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Review 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <div class="card-bodyr">
+            <p class="card-text">"Japan's scenic mountains and culture were incredible. I found great tips and travel ideas on this blog!"</p>
+            <div class="text-center">
+              <h5>-Ranveer Singh</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-blog">
+          <h3>From Blog</h3>
+          <div>
+            <a href="">Kashmir: The Paradise on Earth</a>
+            <p><i class="fa fa-time"></i>01-Jan-2024</p>
+          </div>
+          <div>
+            <a href="">Darjeeling: The Queen of Hills</a>
+            <p><i class="fa fa-time"></i>30-Dec-2022</p>
+          </div>
+          <div>
+            <a href="">Kerala: "God's Own Country"</a>
+            <p><i class="fa fa-time"></i>15-Jun-2022</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-insta">
+          <h3>From Instagram</h3>
+          <a href=""><img src="holudtaxi.jpg" alt="Image"></a>
+          <a href=""><img src="andaman.jpg" alt="Image"></a>
+          <a href=""><img src="princepghat.jpg" alt="Image"></a>
+          <a href=""><img src="flowervalley.png" alt="Image"></a>
+          <a href=""><img src="kolkata.png" alt="Image"></a>
+          <a href=""><img src="himalaya.jpg" alt="Image"></a>
+          <a href=""><img src="boat.jpg" alt="Image"></a>
+          <a href=""><img src="nature1.jpg" alt="Image"></a>
+          <a href=""><img src="rajasthan.png" alt="Image"></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-tags">
+          <h3>Tags Widget</h3>
+          <a href="">Andaman</a>
+          <a href="">Destination</a>
+          <a href="">Trecking</a>
+          <a href="">Budget</a>
+          <a href="">Packing</a>
+          <a href="">Goa</a>
+          <a href="">Travel</a>
+          <a href="">Safty</a>
+          <a href="">Mountain</a>
+          <a href="">Local</a>
+          <a href="">Beach</a>
+          <a href="">Sightseeing</a>
+          <a href="">Nature</a>
+          <a href="">Trip</a>
+          <a href="">Planning</a>
+          <a href="">Outdoor</a>
+          <a href="">Holiday</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <div class="form">
+            <input class="form-control" placeholder="Your Name">
+            <input class="form-control" placeholder="Your Email">
+            <button class="btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-contact">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <h4>Call Now</h4>
+          <p>+123 456 7890</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Email Us</h4>
+          <p>info@example.com</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Get in Touch</h4>
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+         
+          <a href=""><i class="fab fa-youtube"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="copy-text">
+            <p>&copy; <a href="#"></a>TrekTales. All Rights Reserved.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="copy-menu">
+            <a href="">Terms</a>
+            <a href="">Privacy</a>
+            <a href="https://htmlcodex.com">Author</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+</body>
+</html>
